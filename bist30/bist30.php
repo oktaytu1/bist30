@@ -49,22 +49,26 @@ if ($err) {
           <th> text	</th>
           <th> code	</th>
         </tr>';
-
+$i=0;
   foreach ($rates as $rate) {
-    echo "<tr>";
-    echo "<td>".$rate['rate']."</td>";
-    echo "<td>".$rate['lastprice']."</td>";
-    echo "<td>".$rate['lastpricestr']."</td>";
-    echo "<td>".$rate['hacim']."</td>";
-    echo "<td>".$rate['hacimstr']."</td>";
-    echo "<td>".$rate['min']."</td>";
-    echo "<td>".$rate['minstr']."</td>";
-    echo "<td>".$rate['max']."</td>";
-    echo "<td>".$rate['maxstr']."</td>";
-    echo "<td>".$rate['time']."</td>";
-    echo "<td>".$rate['text']."</td>";
-    echo "<td>".$rate['code']."</td>";
-    echo "</tr>";
+    if($i<10)
+    {
+      echo "<tr>";
+      echo "<td>".$rate['rate']."</td>";
+      echo "<td>".$rate['lastprice']."</td>";
+      echo "<td>".$rate['lastpricestr']."</td>";
+      echo "<td>".$rate['hacim']."</td>";
+      echo "<td>".$rate['hacimstr']."</td>";
+      echo "<td>".$rate['min']."</td>";
+      echo "<td>".$rate['minstr']."</td>";
+      echo "<td>".$rate['max']."</td>";
+      echo "<td>".$rate['maxstr']."</td>";
+      echo "<td>".$rate['time']."</td>";
+      echo "<td>".$rate['text']."</td>";
+      echo "<td>".$rate['code']."</td>";
+      echo "</tr>";
+      $i++;
+    }
   }
 
   echo "</table>
